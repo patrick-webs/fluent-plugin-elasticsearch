@@ -252,6 +252,7 @@ class ElasticsearchOutputTest < Test::Unit::TestCase
     assert_false instance.compression
     assert_equal :no_compression, instance.compression_level
     assert_true instance.http_backend_excon_nonblock
+    assert_true instance.flush_at_shutdown
   end
 
   test 'configure compression' do
